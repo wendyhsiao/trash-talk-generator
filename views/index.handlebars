@@ -1,0 +1,57 @@
+<!--  ./views/index.handlebars -->
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12">
+
+      <div>
+        <h2>你想對誰說幹話?</h2>
+      </div>
+
+      <form method="POST" action="/">
+        <div class="row" id="data-panel">
+          <div class="card mb-2 col-4" style="width: 18rem;">
+            <div class="img-wrap">
+              <img class="card-img-top"
+                src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <input type="radio" name="engineer">工程師<br>
+            </div>
+          </div>
+
+          <div class="card mb-2 col-4" style="width: 18rem;">
+            <div class="img-wrap">
+              <img class="card-img-top"
+                src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                alt="Card image cap"></div>
+            <div class="card-body">
+              <input type="radio" name="designer">設計師<br>
+            </div>
+          </div>
+
+          <div class="card mb-2 col-4" style="width: 18rem;">
+            <div class="img-wrap"><img class="card-img-top"
+                src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                alt="Card image cap"></div>
+            <div class="card-body">
+              <input type="radio" name="entrepreneur">創業家<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-container btn-display col-12">
+          <button class="btn btn-primary flex-item" type="submit">產生幹話</button>
+          <div class="display flex-item">
+            {{#if rubbish}}
+            <p>{{rubbish}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>
